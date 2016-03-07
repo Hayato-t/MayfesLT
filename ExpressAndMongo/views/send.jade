@@ -1,0 +1,62 @@
+﻿doctype html
+html(lang="ja")
+    head
+        script
+            include clickevent.js
+        meta(charset="UTF-8")
+        title データ送信
+    body
+        h2 データ送信
+        form(action="/send" method="POST")
+            input(type="text" name="name" placeholder="名前")
+            input(type="radio" name="mode" value="PID" onclick="entryChange();" checked="checked")
+            | PID
+            input(type="radio" name="mode" value="State" onclick="entryChange();")
+            | 1対1
+            table(border="0" cellspacing="0" cellpadding="0")
+                tr(id="State1") 
+                    th ■■■
+                    td
+                        input(type="number" name="1" value="0")
+                tr(id="State2") 
+                    th ■■□
+                    td
+                        input(type="number" name="2" value="0")
+                tr(id="State3")
+                    th ■□■
+                    td
+                        input(type="number" name="3" value="0")
+                tr(id="State4")
+                    th ■□□
+                    td
+                        input(type="number" name="4" value="0")
+                tr(id="State5")
+                    th □■■
+                    td
+                        input(type="number" name="5" value="0")
+                tr(id="State6")
+                    th □■□
+                    td
+                        input(type="number" name="6" value="0")
+                tr(id="State7")
+                    th □□■
+                    td
+                        input(type="number" name="7" value="0")
+                tr(id="State8") 
+                    th □□□
+                    td
+                        input(type="number" name="8" value="0")
+                tr(id="PID1")
+                    th P
+                    td
+                        input(type="number" name="9" value="0")
+                tr(id="PID2")
+                    th I
+                    td
+                        input(type="number" name="10" value="0")
+                tr(id="PID3")
+                    th D
+                    td
+                        input(type="number" name="11" value="0")
+
+            input(type="submit")        

@@ -1,0 +1,25 @@
+﻿doctype html
+
+html(lang="ja")
+    head
+        style
+            include table.css
+        meta(charset="UTF-8")
+        title 送信履歴
+    body
+        table.sample_02(id = 'log')
+            tr.sample_02
+                td.sample_02 送信者
+                td.sample_02 送信時刻
+                td.sample_02 方式
+                td.sample_02 結果
+                td.sample_02 記録
+            - for (var i=0; i<data.length; i++){
+                tr.sample_02
+                    td.sample_02= data[i].name
+                    td.sample_02= data[i].date
+                    td.sample_02= data[i].mode
+                    td.sample_02= data[i].state
+                    td.sample_02= data[i].record
+            - }
+        a(href="/")トップに戻る
